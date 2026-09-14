@@ -85,7 +85,7 @@ The audience is runners targeting a three-to-five-hour finish. Do not emphasize 
 - Separates the input into material facts, identity anchors, and removable context instead of preserving the full photograph by default.
 - Selects material through one “physical property → conceptual perception” proposition, keeping texture from becoming decoration.
 - Establishes one focal point through macro scale, scale shifts, redistributed area, contact boundaries, or phase transitions.
-- Generates a text-free visual master first; accurate typography is added only after the master passes hard gates.
+- Evaluates the visual master without relying on text, then generates the final image with matched real-font typography and purposeful decorative elements.
 - Uses an invisible grid to organize alignment, whitespace, and reading order without drawing guide lines into the final image.
 - Records source, access date, intended use, model-added content, and rights status for web-sourced assets.
 - Uses five hard gates and a 100-point rubric to distinguish finished work, direction studies, and failed drafts.
@@ -101,9 +101,11 @@ Subtract: retain 2–3 facts / remove 50%–70% of the scene
       ↓
 Focus: one focal point + one experimental action + invisible grid
       ↓
-Design: text-free visual master → five hard gates
+Design: visual-master plan → five hard gates
       ↓
-Typeset: precise real-font typography → thumbnail and source checks
+Layout: font / color / placement / size + purposeful decoration → match the visual center of gravity
+      ↓
+Render: image and the complete layout together → copy and thumbnail checks
       ↓
 Validate: score ≥80 with no hard failure → deliver
 ```
@@ -179,7 +181,7 @@ texture-poster-skill/
 ├── references/
 │   ├── creative-brief.md           # Pre-generation concept and material brief
 │   ├── art-direction.md            # Material, light, color, and invisible-grid method
-│   ├── generation-workflow.md      # Text-free master, typesetting, review, and delivery
+│   ├── generation-workflow.md      # Visual-master, typography and decoration, integrated rendering, and review
 │   ├── source-and-rights.md        # Source records and commercial-use boundaries
 │   ├── quality-gates.md            # Five hard gates, scoring rubric, and failure fixes
 │   └── case-studies.md             # Translation notes for the five brand studies
