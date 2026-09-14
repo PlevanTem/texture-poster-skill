@@ -1,0 +1,364 @@
+:root {
+  color-scheme: dark;
+  --ink: #0a0a0a;
+  --paper: #ece9e1;
+  --muted: #85837e;
+  --line: #2a2a28;
+  --accent: #b6ec2f;
+  --gutter: clamp(1rem, 3vw, 3rem);
+  --ease: cubic-bezier(0.65, 0, 0.35, 1);
+  font-family: Inter, "Helvetica Neue", "Noto Sans SC", Arial, sans-serif;
+  font-synthesis: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background: var(--ink);
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 20rem;
+  min-height: 100vh;
+  overflow-x: hidden;
+  background:
+    linear-gradient(90deg, transparent calc(50% - 0.5px), rgba(255, 255, 255, 0.035) 50%, transparent calc(50% + 0.5px)),
+    var(--ink);
+  color: var(--paper);
+}
+
+a {
+  color: inherit;
+}
+
+.skip-link {
+  position: fixed;
+  left: 1rem;
+  top: 1rem;
+  z-index: 20;
+  padding: 0.7rem 1rem;
+  background: var(--paper);
+  color: var(--ink);
+  transform: translateY(-180%);
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+}
+
+.site-header,
+.site-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.1rem var(--gutter);
+  border-color: var(--line);
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.site-header {
+  min-height: 4.25rem;
+  border-bottom: 1px solid var(--line);
+}
+
+.wordmark {
+  display: flex;
+  align-items: baseline;
+  gap: 0.75rem;
+  text-decoration: none;
+  font-weight: 650;
+}
+
+.wordmark-note,
+.site-footer span:last-child {
+  color: var(--muted);
+  font-weight: 450;
+}
+
+.site-header nav a {
+  text-underline-offset: 0.25rem;
+  text-decoration-thickness: 1px;
+}
+
+.intro {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(16rem, 32rem);
+  align-items: end;
+  gap: 2rem;
+  padding: clamp(2rem, 5vh, 4.5rem) var(--gutter) clamp(1.5rem, 4vh, 3rem);
+}
+
+.eyebrow,
+.index {
+  margin: 0 0 0.9rem;
+  color: var(--accent);
+  font-size: 0.74rem;
+  font-weight: 650;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.intro h1 {
+  margin: 0;
+  font-family: "Times New Roman", "Noto Serif SC", serif;
+  font-size: clamp(2.75rem, 7vw, 7rem);
+  font-weight: 500;
+  letter-spacing: -0.055em;
+  line-height: 0.92;
+}
+
+.intro-copy {
+  max-width: 29rem;
+  margin: 0 0 0.35rem auto;
+  color: #aaa7a0;
+  font-size: clamp(1rem, 1.35vw, 1.18rem);
+  line-height: 1.7;
+}
+
+.carousel {
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.viewport {
+  overflow: hidden;
+  outline: none;
+}
+
+.viewport:focus-visible {
+  box-shadow: inset 0 0 0 2px var(--accent);
+}
+
+.track {
+  display: flex;
+  will-change: transform;
+}
+
+.slide {
+  display: grid;
+  grid-template-columns: minmax(18rem, 0.64fr) minmax(16rem, 0.36fr);
+  flex: 0 0 100%;
+  min-width: 0;
+  padding: clamp(1rem, 2.25vw, 2.25rem) var(--gutter);
+}
+
+.poster-frame {
+  display: grid;
+  place-items: center;
+  min-height: min(72svh, 52rem);
+  margin: 0;
+  border-right: 1px solid var(--line);
+  background: #11110f;
+}
+
+.poster-frame img {
+  display: block;
+  width: auto;
+  max-width: min(100%, 41rem);
+  height: min(69svh, 49rem);
+  object-fit: contain;
+  box-shadow: 0 1.5rem 5rem rgba(0, 0, 0, 0.42);
+}
+
+.caption {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  min-width: 0;
+  padding: clamp(2rem, 5vw, 5rem) 0 clamp(1rem, 3vw, 3rem) clamp(1.5rem, 4vw, 4rem);
+}
+
+.caption h2 {
+  margin: 0;
+  font-family: "Times New Roman", "Noto Serif SC", serif;
+  font-size: clamp(3rem, 7vw, 7.5rem);
+  font-weight: 500;
+  letter-spacing: -0.06em;
+  line-height: 0.9;
+}
+
+.caption > p:last-child {
+  max-width: 22rem;
+  margin: 2rem 0 0;
+  color: #aaa7a0;
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.carousel-footer {
+  display: grid;
+  grid-template-columns: auto minmax(8rem, 1fr) 1fr auto;
+  align-items: center;
+  gap: clamp(1rem, 2.5vw, 2.5rem);
+  min-height: 4.75rem;
+  padding: 0.75rem var(--gutter);
+  border-top: 1px solid var(--line);
+}
+
+.counter {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  min-width: 6.75rem;
+  font-variant-numeric: tabular-nums;
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+}
+
+.current {
+  color: var(--accent);
+}
+
+.counter-rule {
+  width: 2rem;
+  height: 1px;
+  background: var(--line);
+}
+
+.progress {
+  position: relative;
+  height: 1px;
+  overflow: hidden;
+  background: var(--line);
+}
+
+.progress-fill {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: var(--accent);
+  transform: scaleX(0.166667);
+  transform-origin: left;
+  transition: transform 520ms var(--ease);
+}
+
+.status {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+.control {
+  min-width: 2.75rem;
+  min-height: 2.75rem;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--paper);
+  font: inherit;
+  cursor: pointer;
+  transition: background 180ms ease, color 180ms ease, border-color 180ms ease;
+}
+
+.control:hover,
+.control:focus-visible {
+  border-color: var(--paper);
+  background: var(--paper);
+  color: var(--ink);
+  outline: none;
+}
+
+.pause {
+  width: auto;
+  padding: 0 1rem;
+  border-radius: 2rem;
+  font-size: 0.78rem;
+}
+
+.site-footer {
+  min-height: 5.5rem;
+  border-top: 0;
+}
+
+@media (max-width: 760px) {
+  body {
+    background: var(--ink);
+  }
+
+  .wordmark-note {
+    display: none;
+  }
+
+  .intro {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+    padding-top: 2.5rem;
+  }
+
+  .intro-copy {
+    margin-left: 0;
+  }
+
+  .slide {
+    grid-template-columns: 1fr;
+    padding: 1rem var(--gutter) 1.5rem;
+  }
+
+  .poster-frame {
+    min-height: auto;
+    border-right: 0;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .poster-frame img {
+    width: 100%;
+    max-width: 31rem;
+    height: auto;
+    max-height: 68svh;
+  }
+
+  .caption {
+    padding: 1.5rem 0 0.5rem;
+  }
+
+  .caption h2 {
+    font-size: clamp(2.8rem, 16vw, 5rem);
+  }
+
+  .caption > p:last-child {
+    margin-top: 1.25rem;
+  }
+
+  .carousel-footer {
+    grid-template-columns: auto 1fr;
+  }
+
+  .progress {
+    grid-column: 1 / -1;
+    grid-row: 2;
+  }
+
+  .controls {
+    grid-column: 2;
+    justify-self: end;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .track,
+  .progress-fill,
+  .control {
+    transition: none !important;
+  }
+}
