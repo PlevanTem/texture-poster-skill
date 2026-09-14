@@ -43,41 +43,41 @@ If you use only one agent, remove the other `--agent` option. Start a new sessio
 
 ## Quick start
 
-After installation, attach a source image and send one of these realistic tasks to your agent. Replace the copy, aspect ratio, and brand constraints as needed.
+After installation, attach a source image and brief the agent as you would in a real design commission: state the business objective, audience, channel, communication theme, exact copy, and brand constraints. The skill should decide the material selection, visual subtraction, and translation method.
 
-### 1. Outdoor apparel: turn fabric into temporal terrain
+### 1. Outdoor apparel: repair-and-reuse campaign
 
 ```text
-Use $texture-poster-skill on the attached sherpa-fleece jacket image to create a 4:5 campaign poster for a repair-and-reuse program.
-Keep the fleece, binding, and a short section of zipper teeth. Remove the full garment, pockets, logo, and white background. The theme is “STAY”; use the headline “Warmth does not have to begin with new.”
+The attachment is a product image of an older sherpa-fleece jacket. Use $texture-poster-skill to create a 4:5 social teaser for our autumn repair-and-reuse program.
+The audience is existing outerwear customers aged 25–40 who care about durability and environmental impact. The message is not about saving money; it is about allowing a garment to continue accompanying its owner. Use the title “STAY” and the subtitle “Warmth does not have to begin with new.” Keep the tone restrained rather than preachy.
 ```
 
-### 2. Tea beverage: suggest origin through a liquid boundary
+### 2. Tea beverage: regional product teaser
 
 ```text
-Use $texture-poster-skill to turn the attached milk-foam tea photograph into a product teaser poster.
-Do not show the complete cup or store. Enlarge the foam folds, tea boundary, and a few ingredients. Use “LANDSCAPE IN WATER” as the title and “The mountain reaches the cup in another form” as the subtitle. Vertical 4:5.
+The attachment is a product image of a new milk-foam tea. Use $texture-poster-skill to create a pre-launch poster for a regional limited edition, distributed through our official account and lifestyle social channels.
+Urban customers should sense a connection between the ingredients and a mountain region, without a literal mountain illustration or an ingredient list. Use “LANDSCAPE IN WATER” as the title and “The mountain reaches the cup in another form” as the subtitle. Vertical 4:5; appetizing, but not a promotional menu.
 ```
 
-### 3. Body care: express everyday time through a container
+### 3. Body care: member-magazine cover
 
 ```text
-Use $texture-poster-skill on the attached amber-glass body-care bottle to create an editorial cover for a member magazine.
-Keep the glass thickness, internal dark axis, bubbles, and refracted edge. Remove the pump, label, and complete bottle silhouette. The theme is “RENEWAL”; keep the result restrained and quiet rather than presenting a conventional product shot.
+The attachment is a product image of our amber-glass body-care range. Use $texture-poster-skill to create a 4:5 editorial cover for the member magazine's “Daily Care” feature.
+Readers already know the product, so this is not an e-commerce selling-point page. Communicate the idea that repeated daily actions can gradually change time. Use “RENEWAL” as the title. Keep the result quiet, restrained, and consistent with the brand's rational tone.
 ```
 
-### 4. Consumer audio: let material give sound a shape
+### 4. Consumer audio: launch-event key visual
 
 ```text
-Use $texture-poster-skill to turn the attached aluminum speaker image into a launch-event key visual.
-Keep only the brushed-metal direction, conical curvature, and a small area of acoustic grooves. Add one restrained interference deformation to imply resonance. Use the title “GIVE FORM”; remove the complete speaker silhouette and brand logo.
+The attachment is a product image of an upcoming aluminum home speaker. Use $texture-poster-skill to create a 4:5 key visual for the launch announcement and social campaign.
+The audience is design professionals and premium-audio customers. The message is that sound has no visible form but leaves direction in space. Use “GIVE FORM” as the title and “A shape for what cannot be seen” as the subtitle. The result should feel premium and precise, not like a specification sheet.
 ```
 
-### 5. Sports nutrition: turn package structure into an energy path
+### 5. Sports nutrition: long-distance training feature
 
 ```text
-Use $texture-poster-skill on the attached energy-gel pack to make a 4:5 poster for a long-distance training feature.
-Use the black film, heat-seal folds, and narrow opening as source facts. Introduce translucent hydrogel and a few warm particles to express “enclose → pass through.” Use the title “THROUGH” and avoid showing the complete package.
+The attachment is a product image of our energy-gel pack. Use $texture-poster-skill to create a 4:5 content cover for a marathon training program's feature on fueling timing.
+The audience is runners targeting a three-to-five-hour finish. Do not emphasize discounts or flavors. The core message is that energy is carried reliably and released when the body needs it. Use “THROUGH” as the title and “Energy for the next stretch” as the subtitle. The visual should feel active without relying on conventional speed lines.
 ```
 
 ## What it does
