@@ -8,11 +8,8 @@
 
 [简体中文](README.md) · [English](README.en.md)
 
-![Agent Skill](https://img.shields.io/badge/Agent-Skill-111111?style=flat-square)
-![Codex Compatible](https://img.shields.io/badge/Codex-Compatible-111111?style=flat-square&logo=openai&logoColor=white)
-![Output Editorial Poster](https://img.shields.io/badge/Output-Editorial_Poster-6B5B4B?style=flat-square)
-![Brand Studies 5](https://img.shields.io/badge/Brand_Studies-5-8A6F4D?style=flat-square)
-![Validator Python stdlib](https://img.shields.io/badge/Validator-Python_stdlib-3776AB?style=flat-square&logo=python&logoColor=white)
+[![GitHub Stars](https://img.shields.io/github/stars/PlevanTem/texture-poster-skill?style=social)](https://github.com/PlevanTem/texture-poster-skill/stargazers)
+![微信 lelouchdbf](https://img.shields.io/badge/WeChat-lelouchdbf-07C160?style=flat-square&logo=wechat&logoColor=white)
 
 </div>
 
@@ -20,20 +17,67 @@
 
 ![五个品牌原图转材质肌理海报对照](examples/brand-source-studies/source-to-poster-contact-sheet.png)
 
-## 30 秒开始
+## 如何安装
 
-在支持 Skills、本地图片读取和图像生成/编辑的 Agent 中直接说：
+### 方法 1：使用 [`npx skills`](https://github.com/vercel-labs/skills)（推荐）
 
-```text
-用 $texture-poster-skill 把这张产品图转成一张 4:5 材质肌理海报。
-不要保留完整产品，只保留 2–3 个不可替代的材质事实；先做无字母版，再准确排版。
+一次安装到 Codex 和 Claude Code 的用户级 Skill 目录：
+
+```bash
+npx skills add PlevanTem/texture-poster-skill --global --agent codex --agent claude-code --copy --yes
 ```
 
-也可以从纯主题开始：
+只使用其中一个 Agent 时，删除另一项 `--agent` 即可。安装后新开一个会话，让 Agent 重新发现 Skill。
+
+### 方法 2：手动安装
+
+1. 下载本仓库 ZIP 并解压，确认目录内直接包含 `SKILL.md`。
+2. 将完整的 `texture-poster-skill` 文件夹复制到对应目录：
+
+| Agent | Windows | macOS / Linux |
+| --- | --- | --- |
+| Codex | `C:\Users\<用户名>\.codex\skills\texture-poster-skill` | `~/.codex/skills/texture-poster-skill` |
+| Claude Code | `C:\Users\<用户名>\.claude\skills\texture-poster-skill` | `~/.claude/skills/texture-poster-skill` |
+
+3. 新开会话并用 `$texture-poster-skill` 调用。
+
+## 快速开始
+
+安装后，附上原图并从下面选择一种真实任务直接发给 Agent。文案、画幅和品牌限制都可以替换。
+
+### 1. 户外服饰：把面料变成时间地貌
 
 ```text
-用 $texture-poster-skill 做一张关于“边界正在渗透”的海报。
-主材质由你选择，只用一个转化关系，不显示网格，不做九宫格。
+用 $texture-poster-skill 处理附件中的羊羔绒夹克产品图，为“旧衣修补计划”做一张 4:5 活动海报。
+保留羊羔绒、包边和一小段拉链齿，删除完整衣形、口袋、Logo 与白底。主题是“留下”，标题为“温暖不必从崭新开始”。
+```
+
+### 2. 茶饮：用液体边界暗示产地
+
+```text
+用 $texture-poster-skill 把附件中的奶盖红茶照片转成新品预热海报。
+不要展示完整杯子或门店；放大奶盖褶皱、茶液边界与少量配料。标题“风物入水”，副标题“山里的风物，换一种方式抵达杯中”，竖版 4:5。
+```
+
+### 3. 身体护理：从容器表达日常时间
+
+```text
+用 $texture-poster-skill 处理附件中的琥珀玻璃护理瓶，为品牌会员月刊制作一张编辑封面。
+保留玻璃厚度、内部暗轴、气泡和折射边缘，删除泵头、标签与完整瓶形。主题“复苏”，整体克制、安静，不做常规产品陈列。
+```
+
+### 4. 消费电子：让材料替声音定形
+
+```text
+用 $texture-poster-skill 将附件中的铝制音箱产品图转成新品发布会主视觉。
+只保留拉丝铝方向、锥面曲率和局部声学槽；通过一处克制的干涉形变暗示余振。标题“定形”，不要保留完整音箱轮廓和品牌 Logo。
+```
+
+### 5. 运动营养：把包装结构转成能量路径
+
+```text
+用 $texture-poster-skill 处理附件中的能量胶包装图，为长距离训练专题制作一张 4:5 海报。
+以黑色膜材、热封折线和狭窄开口为事实，用半透明水凝胶和少量暖色颗粒表达“包裹—穿过”。标题“穿过”，避免直接展示完整包装。
 ```
 
 ## 它会做什么
@@ -82,11 +126,17 @@
 
 每个案例的原图页面、直链、保留事实、删除内容、模型补充和 SHA-256 见 [案例索引](examples/brand-source-studies/case-index.json)；转译判断见 [案例复盘](references/case-studies.md)。
 
-## 适合与不适合
+## 适用场景
 
-适合：品牌概念海报、产品材质肌理叙事、文化/自然主题、活动主视觉、编辑封面、带有真实表面证据的摄影转译。
+| 场景 | 适合解决的问题 |
+| --- | --- |
+| 品牌概念海报 | 不直接陈列产品，用材质物理属性表达品牌命题 |
+| 新品发布与活动主视觉 | 从产品原图提炼一个有辨识度的视觉母题 |
+| 产品材质肌理叙事 | 放大面料、玻璃、金属、液体、膜材等真实表面证据 |
+| 编辑封面与社交内容 | 在手机缩略图中建立单一焦点和清晰明暗关系 |
+| 文化与自然主题 | 将地貌、建筑、植物或手工材料转成隐性的概念联想 |
 
-不适合：电商白底主图、必须完整展示全部卖点的商品页、常规磨皮调色、信息密集长图、要求复制某张标杆构图的仿作。
+它不是电商白底主图、常规磨皮调色或信息密集长图工具，也不用于复制某张标杆的具体构图。
 
 ## 输入建议
 
@@ -101,7 +151,15 @@
 
 ## 质量标准
 
-母版必须通过五个硬门：视觉传达效果、缩略图、材质不可替换、减法、真实性。完整海报按主题—材质关系、材质主体化、抽象转译、编辑精调、焦点、图文整合、色光统一和独特性评分；80/100 以上才作为完成稿。
+| 硬门槛 | 通过标准 | 失败信号 |
+| --- | --- | --- |
+| 视觉传达效果 | 图像本身已通过裁切、尺度、明暗、色域、层次与动线形成主动后期美学 | 仍是普通照片、统一滤镜或等待文字补救的背景图 |
+| 缩略图 | 缩到手机预览仍只有一个焦点，且大面积明暗关系清楚 | 多个焦点争抢，第一眼不知道看哪里 |
+| 材质不可替换 | 所选材质的物理属性直接表达主题，换成其他材质会破坏概念 | 纸、石、金属或水互换后仍不影响表达 |
+| 减法 | 无需识别原对象时，约 50%–70% 的环境信息已被删除或重组 | 产品和场景几乎原样保留，只叠加文字与噪点 |
+| 真实性 | 尺度、方向、光线、粗糙度和空间深度可信 | 平铺贴图、重复噪点或塑料 CGI 感 |
+
+五项必须全部通过。完整海报还需达到 80/100，才作为完成稿交付。
 
 详见 [质量门控](references/quality-gates.md)。
 
@@ -109,37 +167,30 @@
 
 ```text
 texture-poster-skill/
-├── SKILL.md
-├── README.md
-├── README.en.md
-├── artifact-template.json
-├── agents/openai.yaml
+├── SKILL.md                       # Agent 的主执行入口与核心合同
+├── README.md                      # 中文使用说明
+├── README.en.md                   # English documentation
+├── artifact-template.json         # 图像模板类型、标杆图与预览图声明
+├── agents/
+│   └── openai.yaml                # 展示名称、图标、默认提示词与调用策略
 ├── assets/
-│   ├── reference.png          # 九张标杆组成的风格板
-│   └── preview.png
+│   ├── reference.png              # 九张标杆组成的风格板，不是构图模板
+│   └── preview.png                # Skill 列表与画廊预览图
 ├── references/
-│   ├── creative-brief.md
-│   ├── art-direction.md
-│   ├── generation-workflow.md
-│   ├── source-and-rights.md
-│   ├── quality-gates.md
-│   └── case-studies.md
-├── examples/brand-source-studies/
-│   ├── source-to-poster-contact-sheet.png
-│   ├── case-index.json
-│   └── *.png                  # 五张完成海报
-└── scripts/validate_package.py
+│   ├── creative-brief.md           # 生成前的概念与材质简报
+│   ├── art-direction.md            # 材质、光线、色彩与不可见网格方法
+│   ├── generation-workflow.md      # 无字母版、排版、读回与交付流程
+│   ├── source-and-rights.md        # 图源记录与商用权利边界
+│   ├── quality-gates.md            # 五项硬门、评分表与失败修正
+│   └── case-studies.md             # 五个品牌实验的转译复盘
+├── examples/
+│   └── brand-source-studies/
+│       ├── source-to-poster-contact-sheet.png  # 五组原图—成图对照
+│       ├── case-index.json                    # 来源、取舍、补充与文件校验信息
+│       └── *.png                              # 五张完成海报
+└── scripts/
+    └── validate_package.py          # Agent 内部运行的包结构与案例校验
 ```
-
-## 验证
-
-校验包结构、案例索引、README 图片链接和输出尺寸：
-
-```powershell
-python scripts/validate_package.py
-```
-
-脚本只使用 Python 标准库，不安装依赖。它验证五张案例均为 `1122×1402`，联系表为 `2200×3100`。
 
 ## 使用边界
 
