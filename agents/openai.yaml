@@ -1,0 +1,7 @@
+interface:
+  display_name: "Texture Poster 材质肌理海报"
+  short_description: "从主题或原图提炼材质肌理，生成单张编辑海报"
+  icon_large: "./assets/preview.png"
+  default_prompt: "Use $texture-poster-skill to turn my topic or source photo into one texture-led editorial poster. Build a text-free visual master first, then typeset exact copy."
+policy:
+  allow_implicit_invocation: true
