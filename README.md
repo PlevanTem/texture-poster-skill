@@ -1,6 +1,22 @@
-# Texture Poster · 材质肌理海报
+<div align="center">
 
-把普通照片、产品图或品牌主题转译成一张以真实材质肌理承担概念的微距海报。它解决的不是“给照片加一层纹理”，而是先删掉无关场景，再让材质肌理、尺度、光线、负空间和准确排版共同传达一个隐性联想。
+# Texture Poster
+
+**材质肌理海报 Skill**
+
+把普通照片、产品图或品牌主题转译成以真实材质肌理承担概念的编辑海报。
+
+[简体中文](README.md) · [English](README.en.md)
+
+![Agent Skill](https://img.shields.io/badge/Agent-Skill-111111?style=flat-square)
+![Codex Compatible](https://img.shields.io/badge/Codex-Compatible-111111?style=flat-square&logo=openai&logoColor=white)
+![Output Editorial Poster](https://img.shields.io/badge/Output-Editorial_Poster-6B5B4B?style=flat-square)
+![Brand Studies 5](https://img.shields.io/badge/Brand_Studies-5-8A6F4D?style=flat-square)
+![Validator Python stdlib](https://img.shields.io/badge/Validator-Python_stdlib-3776AB?style=flat-square&logo=python&logoColor=white)
+
+</div>
+
+它解决的不是“给照片加一层纹理”，而是先删掉无关场景，再让材质肌理、尺度、光线、负空间和准确排版共同传达一个隐性联想。
 
 ![五个品牌原图转材质肌理海报对照](examples/brand-source-studies/source-to-poster-contact-sheet.png)
 
@@ -95,6 +111,7 @@
 texture-poster-skill/
 ├── SKILL.md
 ├── README.md
+├── README.en.md
 ├── artifact-template.json
 ├── agents/openai.yaml
 ├── assets/
