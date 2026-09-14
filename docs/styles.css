@@ -184,12 +184,37 @@ a {
   line-height: 0.9;
 }
 
-.caption > p:last-child {
+.caption-description {
   max-width: 22rem;
   margin: 2rem 0 0;
   color: #aaa7a0;
   font-size: 1rem;
   line-height: 1.7;
+}
+
+.product-tag {
+  display: inline-flex;
+  align-items: center;
+  align-self: flex-start;
+  gap: 0.55rem;
+  margin-top: 1.25rem;
+  padding: 0.45rem 0.72rem;
+  border: 1px solid rgba(236, 233, 225, 0.28);
+  border-radius: 999px;
+  background: transparent;
+  color: #c8c5bd;
+  font-size: 0.75rem;
+  font-weight: 550;
+  letter-spacing: 0.08em;
+  line-height: 1;
+}
+
+.product-tag::before {
+  width: 0.32rem;
+  height: 0.32rem;
+  border-radius: 50%;
+  background: var(--accent);
+  content: "";
 }
 
 .carousel-footer {
@@ -332,7 +357,7 @@ a {
     font-size: clamp(2.8rem, 16vw, 5rem);
   }
 
-  .caption > p:last-child {
+  .caption-description {
     margin-top: 1.25rem;
   }
 
